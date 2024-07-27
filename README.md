@@ -18,12 +18,12 @@
 
 Install the gem and add to the application's Gemfile by executing:
 ```sh
-bundle add mime_actor
+bundle add rspec-activesupport
 ```
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 ```sh
-gem install mime_actor
+gem install rspec-activesupport
 ```
 
 ## Development
@@ -33,11 +33,11 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## License
-Please see [LICENSE](https://github.com/ryancyq/mime_actor/blob/main/LICENSE) for licensing details.
+Please see [LICENSE](https://github.com/ryancyq/rspec-activesupport/blob/main/LICENSE) for licensing details.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at [https://github.com/ryancyq/mime_actor](https://github.com/ryancyq/mime_actor).
+Bug reports and pull requests are welcome on GitHub at [https://github.com/ryancyq/rspec-activesupport](https://github.com/ryancyq/rspec-activesupport).
 
 [ci_badge]: https://github.com/ryancyq/rspec-activesupport/actions/workflows/build.yml/badge.svg
 [ci_workflows]: https://github.com/ryancyq/rspec-activesupport/actions/workflows/

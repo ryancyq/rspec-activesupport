@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "rspec/activesupport"
+require "rspec-activesupport"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -9,7 +9,10 @@ RSpec.configure do |config|
   # Disable RSpec exposing methods globally on `Module` and `main`
   config.disable_monkey_patching!
 
-  config.expect_with :rspec do |c|
-    c.syntax = :expect
+  config.expect_with :rspec do |expectations|
+    expectations.syntax = :expect
+    # This option will default to `true` in RSpec 4. It makes the `description`
+    # and `failure_message` of custom matchers include text for helper methods
+    expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
 end

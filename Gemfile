@@ -2,11 +2,18 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in rspec-activesupport.gemspec
 gemspec
 
-gem "rake", "~> 13.0"
+gem "activesupport", ">= 5.0"
+gem "rake", ">= 11.0"
+gem "rspec-expectations", "~> 3.0"
 
-gem "rspec", "~> 3.0"
+group :development, :test do
+  gem "rspec", "~> 3.0"
+end
 
-gem "rubocop", "~> 1.21"
+group :development do
+  gem "rubocop", "~> 1.65", require: false
+  gem "rubocop-rake", require: false
+  gem "rubocop-rspec", require: false
+end

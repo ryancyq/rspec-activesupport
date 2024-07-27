@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "rspec/activesupport/version"
+require "rspec/active_support/version"
 
 module RSpec
   module ActiveSupport

@@ -2,7 +2,7 @@
 
 [![CI][ci_badge]][ci_workflows]
 
-`rspec-activesupport` surfaces active support test assertions through the [RSpec][] testing framework.
+`rspec-activesupport` surfaces active support test assertions through the [RSpec][rspec] testing framework.
 
 ### Assertions Supported
 
@@ -41,3 +41,4 @@ Bug reports and pull requests are welcome on GitHub at [https://github.com/ryanc
 
 [ci_badge]: https://github.com/ryancyq/rspec-activesupport/actions/workflows/build.yml/badge.svg
 [ci_workflows]: https://github.com/ryancyq/rspec-activesupport/actions/workflows/
+[rspec]: https://rspec.info/

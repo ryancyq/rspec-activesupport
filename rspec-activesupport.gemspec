@@ -4,11 +4,11 @@ require_relative "lib/rspec/active_support/version"
 
 Gem::Specification.new do |spec|
   spec.name = "rspec-activesupport"
-  spec.version = Rspec::ActiveSupport.gem_version
+  spec.version = RSpec::ActiveSupport.gem_version
   spec.authors = ["Ryan Chang"]
   spec.email = ["ryancyq@gmail.com"]
 
-  spec.summary = "Rspec matcher for active support test helper "
+  spec.summary = "RSpec matcher for active support test helper "
   spec.description = ""
   spec.homepage = "https://github.com/ryancyq/rspec-activesupport"
   spec.license = "MIT"

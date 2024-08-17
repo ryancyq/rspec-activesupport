@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "lib/rspec/activesupport/version"
+require_relative "lib/rspec/active_support/version"
 
 Gem::Specification.new do |spec|
   spec.name = "rspec-activesupport"

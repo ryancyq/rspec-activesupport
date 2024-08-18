@@ -1,12 +1,13 @@
 # rspec-activesupport
 
+[![Version][rubygems_badge]][rubygems]
 [![CI][ci_badge]][ci_workflows]
 
-`rspec-activesupport` surfaces active support test assertions through the [RSpec][rspec] testing framework.
+`rspec-activesupport` provides active support test assertions through the [RSpec][rspec] matchers.
 
 ### Assertions Supported
 
-- `ActiveSupport::Deprecation.warn`: allow rspec expection to assert on deprecations being warned
+- `ActiveSupport::Deprecation.warn`: RSpec expectation on the deprecations being warned.
 
 ## Requirements
 
@@ -16,14 +17,59 @@
 
 ## Installation
 
-Install the gem and add to the application's Gemfile by executing:
+Add `rspec-activesupport` to both the `:development` and `:test` groups of your Gemfile:
+```rb
+group :development, :test do
+  gem "rspec-activesupport", "~> 0.1"
+end
+```
+
+or excute the following command in bash:
 ```sh
-bundle add rspec-activesupport
+bundle add rspec-activesupport --group development,test 
 ```
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 ```sh
 gem install rspec-activesupport
+```
+
+### Setup (Optional)
+
+If you want use configure the entire RSpec suite with the same deprecator, add the following to the `spec_helper.rb` which is usually used to load RSpec configuration.
+```rb
+# /spec_helper.rb
+require "rspec/active_support"
+
+RSpec.configure do |config|
+  config.deprecator = MyGem.deprecator
+end
+```
+
+### Usage
+
+With that, you can start using the matchers provided by the gem.
+
+```rb
+describe "#deprecator" do
+  let(:deprecate) { MyGem.deprecator.warn "my deprecation" }
+
+  it "warn deprecation" do
+    expect { deprecate }.to warn_deprecation(%r{my deprecation})
+  end
+end
+```
+
+or you can pass the deprecator explicitly to the matcher
+
+```rb
+describe "#deprecator" do
+  let(:deprecate) { MyGem.deprecator.warn "my deprecation" }
+
+  it "warn deprecation" do
+    expect { deprecate }.to warn_deprecation(%r{my deprecation}, MyGem.deprecator)
+  end
+end
 ```
 
 ## Development
@@ -39,6 +85,8 @@ Please see [LICENSE](https://github.com/ryancyq/rspec-activesupport/blob/main/LI
 
 Bug reports and pull requests are welcome on GitHub at [https://github.com/ryancyq/rspec-activesupport](https://github.com/ryancyq/rspec-activesupport).
 
+[rubygems_badge]: https://img.shields.io/gem/v/rspec-activesupport.svg
+[rubygems]: https://rubygems.org/gems/rspec-activesupport
 [ci_badge]: https://github.com/ryancyq/rspec-activesupport/actions/workflows/build.yml/badge.svg
 [ci_workflows]: https://github.com/ryancyq/rspec-activesupport/actions/workflows/
 [rspec]: https://rspec.info/

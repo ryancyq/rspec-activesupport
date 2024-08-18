@@ -87,5 +87,5 @@ Bug reports and pull requests are welcome on GitHub at [https://github.com/ryanc
 [rubygems_badge]: https://img.shields.io/gem/v/rspec-activesupport.svg
 [rubygems]: https://rubygems.org/gems/rspec-activesupport
 [ci_badge]: https://github.com/ryancyq/rspec-activesupport/actions/workflows/build.yml/badge.svg
-[ci_workflows]: https://github.com/ryancyq/rspec-activesupport/actions/workflows/
+[ci_workflows]: https://github.com/ryancyq/rspec-activesupport/actions/workflows/build.yml
 [rspec]: https://rspec.info/

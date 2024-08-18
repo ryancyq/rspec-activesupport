@@ -13,7 +13,7 @@ module RSpec
     module VERSION
       MAJOR = 0
       MINOR = 1
-      BUILD = 1
+      BUILD = 2
       PRE   = nil
 
       STRING = [MAJOR, MINOR, BUILD, PRE].compact.join(".")

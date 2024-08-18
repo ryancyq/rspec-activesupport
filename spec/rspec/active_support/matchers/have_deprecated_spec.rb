@@ -19,21 +19,21 @@ RSpec.describe RSpec::ActiveSupport::Matchers::DeprecationMatcher do
       end
 
       it "accepts exact match" do
-        expect { deprecate }.to have_deprecated("DEPRECATION WARNING: my deprecation")
+        expect { deprecate }.to warn_deprecation("DEPRECATION WARNING: my deprecation")
       end
 
       it "rejects partial match" do
-        expect { deprecate }.not_to have_deprecated("my deprecation")
+        expect { deprecate }.not_to warn_deprecation("my deprecation")
       end
     end
 
     context "when message is Regexp" do
       it "accepts exact match" do
-        expect { deprecate }.to have_deprecated(%r{DEPRECATION WARNING: my deprecation})
+        expect { deprecate }.to warn_deprecation(%r{DEPRECATION WARNING: my deprecation})
       end
 
       it "accepts partial match" do
-        expect { deprecate }.to have_deprecated(%r{y deprecation})
+        expect { deprecate }.to warn_deprecation(%r{y deprecation})
       end
     end
   end
@@ -53,7 +53,7 @@ RSpec.describe RSpec::ActiveSupport::Matchers::DeprecationMatcher do
       end
 
       it "accepts" do
-        expect { deprecate }.to have_deprecated(%r{my configured deprecation})
+        expect { deprecate }.to warn_deprecation(%r{my configured deprecation})
       end
     end
 
@@ -61,7 +61,7 @@ RSpec.describe RSpec::ActiveSupport::Matchers::DeprecationMatcher do
       let(:deprecation_message) { "my passed deprecation" }
 
       it "accepts" do
-        expect { deprecate }.to have_deprecated(%r{my passed deprecation}, deprecator)
+        expect { deprecate }.to warn_deprecation(%r{my passed deprecation}, deprecator)
       end
     end
   end

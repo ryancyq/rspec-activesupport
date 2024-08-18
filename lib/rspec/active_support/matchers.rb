@@ -7,4 +7,4 @@ module RSpec
   end
 end
 
-require "rspec/active_support/matchers/have_deprecated"
+require "rspec/active_support/matchers/warn_deprecation"

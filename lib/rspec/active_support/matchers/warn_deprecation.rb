@@ -20,7 +20,7 @@ module RSpec
         end
 
         def matches?(actual)
-          raise ArgumentError, "have_deprecated only work with block arguments" unless actual in Proc
+          raise ArgumentError, "warn_deprecation only work with block arguments" unless actual in Proc
 
           _, @deprecations = collect_deprecations(deprecator, &actual)
           return false if deprecations.empty?
@@ -55,7 +55,7 @@ module RSpec
         end
       end
 
-      def have_deprecated(message = nil, deprecator = nil)
+      def warn_deprecation(message = nil, deprecator = nil)
         DeprecationMatcher.new(message, deprecator)
       end
     end

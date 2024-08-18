@@ -38,7 +38,7 @@ gem install rspec-activesupport
 
 If you want to configure the entire RSpec suite with the same deprecator, add the following to `spec_helper.rb`, which is usually used to load RSpec configuration:
 ```rb
-# /spec_helper.rb
+# /spec/spec_helper.rb
 require "rspec/active_support"
 
 RSpec.configure do |config|

@@ -3,11 +3,11 @@
 [![Version][rubygems_badge]][rubygems]
 [![CI][ci_badge]][ci_workflows]
 
-`rspec-activesupport` provides active support test assertions through the [RSpec][rspec] matchers.
+`rspec-activesupport` provides ActiveSupport test assertions through [RSpec][rspec] matchers.
 
 ### Assertions Supported
 
-- `ActiveSupport::Deprecation.warn`: RSpec expectation on the deprecations being warned.
+- `ActiveSupport::Deprecation.warn`: RSpec expectation on deprecations being warned.
 
 ## Requirements
 
@@ -24,19 +24,19 @@ group :development, :test do
 end
 ```
 
-or excute the following command in bash:
+Or execute the following command in bash:
 ```sh
 bundle add rspec-activesupport --group development,test 
 ```
 
-If bundler is not being used to manage dependencies, install the gem by executing:
+If Bundler is not being used to manage dependencies, install the gem by executing:
 ```sh
 gem install rspec-activesupport
 ```
 
 ### Setup (Optional)
 
-If you want use configure the entire RSpec suite with the same deprecator, add the following to the `spec_helper.rb` which is usually used to load RSpec configuration.
+If you want to configure the entire RSpec suite with the same deprecator, add the following to `spec_helper.rb`, which is usually used to load RSpec configuration:
 ```rb
 # /spec_helper.rb
 require "rspec/active_support"
@@ -60,8 +60,7 @@ describe "#deprecator" do
 end
 ```
 
-or you can pass the deprecator explicitly to the matcher
-
+Or you can pass the deprecator explicitly to the matcher:
 ```rb
 describe "#deprecator" do
   let(:deprecate) { MyGem.deprecator.warn "my deprecation" }

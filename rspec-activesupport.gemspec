@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors = ["Ryan Chang"]
   spec.email = ["ryancyq@gmail.com"]
 
-  spec.summary = "RSpec matcher for active support test helper "
+  spec.summary = "RSpec matcher for ActiveSupport test assertions"
   spec.description = ""
   spec.homepage = "https://github.com/ryancyq/rspec-activesupport"
   spec.license = "MIT"

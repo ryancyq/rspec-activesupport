@@ -2,6 +2,7 @@
 
 [![Version][rubygems_badge]][rubygems]
 [![CI][ci_badge]][ci_workflows]
+[![Maintainability][maintainability_badge]][maintainability]
 
 `rspec-activesupport` provides ActiveSupport test assertions through [RSpec][rspec] matchers.
 
@@ -88,4 +89,6 @@ Bug reports and pull requests are welcome on GitHub at [https://github.com/ryanc
 [rubygems]: https://rubygems.org/gems/rspec-activesupport
 [ci_badge]: https://github.com/ryancyq/rspec-activesupport/actions/workflows/build.yml/badge.svg
 [ci_workflows]: https://github.com/ryancyq/rspec-activesupport/actions/workflows/build.yml
+[maintainability_badge]: https://api.codeclimate.com/v1/badges/f956ddf9381ba82cd473/maintainability
+[maintainability]: https://codeclimate.com/github/ryancyq/rspec-activesupport/maintainability
 [rspec]: https://rspec.info/

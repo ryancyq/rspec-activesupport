@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rspec-activesupport (0.1.2)
+    rspec-activesupport (0.2.0)
       activesupport (>= 6.1)
       rspec-expectations (~> 3.0)
 

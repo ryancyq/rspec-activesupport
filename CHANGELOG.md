@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 ---
-## [Unreleased](https://github.com/ryancyq/mime_actor/tree/HEAD)
+## [0.2.0](https://github.com/ryancyq/mime_actor/compare/v0.1.2..v0.2.0) - 2024-10-03
 
 ### Documentation
 

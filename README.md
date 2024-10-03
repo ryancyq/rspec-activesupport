@@ -12,8 +12,8 @@
 
 ## Requirements
 
-- Ruby: MRI 3.1+
-- ActiveSupport: 5.0+
+- Ruby: MRI 2.5+
+- ActiveSupport: 6.1+
 - RSpec-Expectations: 3.0+
 
 ## Installation

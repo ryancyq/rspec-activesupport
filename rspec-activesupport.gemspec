@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.homepage = "https://github.com/ryancyq/rspec-activesupport"
   spec.license = "MIT"
 
-  spec.required_ruby_version = ">= 3.1.0"
+  spec.required_ruby_version = ">= 2.5"
 
   spec.metadata = {
     "rubygems_mfa_required" => "true",
@@ -35,8 +35,7 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "activesupport", ">= 5.0"
-  spec.add_dependency "rake", ">= 11.0"
+  spec.add_dependency "activesupport", ">= 6.1"
   spec.add_dependency "rspec-expectations", "~> 3.0"
 
   # For more information and examples about making a new gem, check out our

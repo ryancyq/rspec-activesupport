@@ -45,6 +45,13 @@ jobs:
           - ruby-version: "3.0"
             activesupport-version: "7.2"
 
+          # mutex_m is dropped from standard ruby libraries after 3.3
+          # https://github.com/rails/rails/commit/bcdeea5da7657375df21a856135ae7a66a8c3812
+          - ruby-version: "head"
+            activesupport-version: "6.1"
+          - ruby-version: "head"
+            activesupport-version: "7.0"
+
     timeout-minutes: 3
 
     steps:

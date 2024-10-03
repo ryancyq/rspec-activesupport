@@ -13,14 +13,14 @@ module RSpec
         attr_reader :expected, :deprecator, :deprecations
 
         def initialize(expected, deprecator)
-          raise ArgumentError, "deprecator must be an instance, got: #{deprecator.inspect}" if deprecator in Class
+          raise ArgumentError, "deprecator must be an instance, got: #{deprecator.inspect}" if deprecator.is_a?(Class)
 
           @expected = expected
           @deprecator = deprecator || RSpec.configuration.deprecator
         end
 
         def matches?(actual)
-          raise ArgumentError, "warn_deprecation only work with block arguments" unless actual in Proc
+          raise ArgumentError, "warn_deprecation only work with block arguments" unless actual.is_a?(Proc)
 
           _, @deprecations = collect_deprecations(deprecator, &actual)
           return false if deprecations.empty?

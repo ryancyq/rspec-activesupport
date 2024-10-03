@@ -1,10 +1,8 @@
-name: publish
+name: Release New Version
 
 on:
   push:
-    branches:
-      - main
-      - "releases/?*-stable"
+    branches: [main]
     paths: ["lib/rspec/active_support/version.rb"]
 
 jobs:
@@ -17,17 +15,14 @@ jobs:
     timeout-minutes: 3
     
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Install Ruby and gems
-        uses: ruby/setup-ruby@v1
+      - uses: ruby/setup-ruby@v1
         with:
+          ruby-version: "3"
           bundler-cache: true
 
-      - name: Run Rspec
-        run: |
-          bundle exec rake spec
+      - run: bundle exec rake spec
 
       - uses: ryancyq/bundle-release-gem@v1
 

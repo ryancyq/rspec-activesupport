@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 ---
+## [Unreleased](https://github.com/ryancyq/rspec-activesupport/tree/HEAD)
+
+### Build
+
+- **(deps)** bump orhun/git-cliff-action from 3 to 4 - ([2e84eed](https://github.com/ryancyq/rspec-activesupport/commit/2e84eed3a9011a4bf26d0e85c43d0d7a5626da3f)) - dependabot[bot]
+
+---
 ## [0.2.0](https://github.com/ryancyq/rspec-activesupport/compare/v0.1.2..v0.2.0) - 2024-10-03
 
 ### Documentation

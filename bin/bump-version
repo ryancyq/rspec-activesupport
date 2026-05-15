@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+VERSION=$1
+
+if [ -z "$VERSION" ]; then
+  echo "Usage: $0 <version>"
+  exit 1
+fi
+
+IFS='.' read -r -a parts <<< "$VERSION"
+MAJOR="${parts[0]}"
+MINOR="${parts[1]}"
+BUILD="${parts[2]}"
+PRE_RAW="${parts[3]}"
+
+if [ -z "$PRE_RAW" ]; then
+  PRE="nil"
+else
+  PRE="\"$PRE_RAW\""
+fi
+
+printf '# frozen_string_literal: true\n\nmodule RSpec\n  module ActiveSupport\n    def self.version\n      VERSION::STRING\n    end\n\n    def self.gem_version\n      Gem::Version.new(VERSION::STRING)\n    end\n\n    module VERSION\n      MAJOR = %s\n      MINOR = %s\n      BUILD = %s\n      PRE   = %s\n\n      STRING = [MAJOR, MINOR, BUILD, PRE].compact.join(".")\n    end\n  end\nend\n' "$MAJOR" "$MINOR" "$BUILD" "$PRE" > ./lib/rspec/active_support/version.rb
+bundle > /dev/null
+
+echo "$VERSION"

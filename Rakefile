@@ -2,12 +2,8 @@
 
 require "bundler/gem_tasks"
 
-require "rubocop/rake_task"
-RuboCop::RakeTask.new
-
-require "rspec/core/rake_task"
-RSpec::Core::RakeTask.new(:spec) do |config|
-  config.rspec_opts = "--format documentation"
+Dir[File.expand_path("tasks/*.rake", __dir__)].each do |task|
+  load task
 end
 
 task default: %i[spec rubocop]

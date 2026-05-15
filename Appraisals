@@ -10,6 +10,7 @@
 ].each do |activesupport_version|
   appraise "activesupport-#{activesupport_version.chomp ".0"}" do
     gem "activesupport", "~> #{activesupport_version}"
+    gem "mutex_m" if activesupport_version < "7.0"
   end
 end
 

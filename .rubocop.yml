@@ -7,17 +7,20 @@ AllCops:
   NewCops: enable
   SuggestExtensions: false
   Exclude:
-    - bin/*
     - vendor/**/*
 
-Style/RegexpLiteral:
-  EnforcedStyle: percent_r
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - bin/*
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
 
 Style/StringLiteralsInInterpolation:
   EnforcedStyle: double_quotes
+
+Style/RegexpLiteral:
+  EnforcedStyle: percent_r
 
 Style/HashSyntax:
   EnforcedShorthandSyntax: consistent
@@ -28,3 +31,16 @@ Layout/FirstHashElementIndentation:
 Layout/HashAlignment:
   EnforcedHashRocketStyle: table
   EnforcedColonStyle: table
+
+Naming/FileName:
+  Exclude:
+    - lib/rspec-activesupport.rb
+
+Style/Documentation:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false

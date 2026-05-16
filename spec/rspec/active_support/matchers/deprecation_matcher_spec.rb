@@ -15,7 +15,11 @@ RSpec.describe RSpec::ActiveSupport::Matchers::DeprecationMatcher do
 
       before do
         collected = [nil, [full_message]]
-        allow_any_instance_of(described_class).to receive(:collect_deprecations).and_return(collected)
+        allow(described_class).to receive(:new).and_wrap_original do |original, *args|
+          instance = original.call(*args)
+          allow(instance).to receive(:collect_deprecations).and_return(collected)
+          instance
+        end
       end
 
       it "accepts exact match" do

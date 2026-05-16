@@ -3,11 +3,20 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 ---
-## [Unreleased](https://github.com/ryancyq/rspec-activesupport/tree/HEAD)
+## [0.3.0](https://github.com/ryancyq/rspec-activesupport/compare/v0.2.0..v0.3.0) - 2026-05-16
+
+### Tests
+
+- address rubocop violations - ([b488e99](https://github.com/ryancyq/rspec-activesupport/commit/b488e9916fd0ff679c8c669287b0e737aa60f862)) - Ryan Chang
 
 ### Build
 
 - **(deps)** bump orhun/git-cliff-action from 3 to 4 - ([2e84eed](https://github.com/ryancyq/rspec-activesupport/commit/2e84eed3a9011a4bf26d0e85c43d0d7a5626da3f)) - dependabot[bot]
+- **(deps)** bump actions/checkout from 4 to 6 - ([1efe441](https://github.com/ryancyq/rspec-activesupport/commit/1efe44144ca7cc88984e8dee6ace7386b9b7f06f)) - dependabot[bot]
+
+### Lib
+
+- update appraisal to support active support 8.x - ([e05bbd8](https://github.com/ryancyq/rspec-activesupport/commit/e05bbd8d073057a3d13bc43f2d910b93b9c2d651)) - Ryan Chang
 
 ---
 ## [0.2.0](https://github.com/ryancyq/rspec-activesupport/compare/v0.1.2..v0.2.0) - 2024-10-03

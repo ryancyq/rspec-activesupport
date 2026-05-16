@@ -12,7 +12,7 @@ module RSpec
 
     module VERSION
       MAJOR = 0
-      MINOR = 2
+      MINOR = 3
       BUILD = 0
       PRE   = nil
 
